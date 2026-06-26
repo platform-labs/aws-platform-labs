@@ -1,0 +1,6 @@
+domain_name     = "api-dev.csnp.xyz"
+hosted_zone_id = "Z_REPLACE_ME"
+alb_arn         = "arn:aws:elasticloadbalancing:us-east-1:ACCOUNT_ID:loadbalancer/app/REPLACE"
+alb_dns_name    = "REPLACE.us-east-1.elb.amazonaws.com"
+alb_zone_id     = "Z_REPLACE_ALB_ZONE"
+target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:ACCOUNT_ID:targetgroup/REPLACE"

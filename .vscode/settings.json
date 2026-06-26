@@ -1,0 +1,21 @@
+{
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "git.ignoreLimitWarning": true,
+
+    "prettier.configPath": "",
+    "prettier.requireConfig": false,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+
+    "workbench.tree.indent": 14,
+
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    }
+}

@@ -1,0 +1,35 @@
+# Copy to terraform.tfvars (gitignored), fill in real values - never commit it.
+
+aws_region   = "us-east-1"
+project_name = "csnp-wallet"
+
+vpc_id     = "vpc-xxxxxxxx"
+subnet_ids = ["subnet-xxxxxxxx", "subnet-yyyyyyyy"]
+
+# Default: Lab 2 creates its own RDS + S3, so it still works after Lab 1 destroy.
+create_data_dependencies = true
+
+# Only set these when create_data_dependencies=false and reusing existing RDS/S3.
+# rds_security_group_id = "sg-xxxxxxxx"
+# db_host               = "csnp-wallet-dev.xxxxxxxxxx.us-east-1.rds.amazonaws.com"
+
+# Create ECR first, then build + push the image, then put the URI here.
+# Terraform does not build/push images.
+container_image = "<ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/csnp-wallet-api:v1"
+container_port  = 5000
+
+task_cpu      = "256"
+task_memory   = "512"
+desired_count = 2
+
+assign_public_ip = true
+
+# Created or reused data dependencies
+rds_identifier       = "csnp-wallet-dev"
+db_engine_version    = "16"
+db_instance_class    = "db.t3.micro"
+db_allocated_storage = 20
+db_name              = "wallet"
+db_username          = "postgres"
+db_password          = "CHANGE_ME"
+s3_bucket            = "csnp-wallet-dev"

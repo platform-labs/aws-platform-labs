@@ -1,0 +1,6 @@
+private_data_subnet_ids = ["subnet-REPLACE_A", "subnet-REPLACE_B"]
+rds_security_group_id   = "sg-REPLACE_ME"
+database_name           = "wallet"
+master_username         = "clusteradmin"
+instance_class          = "db.t4g.medium"
+environment             = "lab"

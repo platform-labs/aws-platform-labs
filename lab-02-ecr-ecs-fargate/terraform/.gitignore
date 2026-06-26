@@ -1,0 +1,12 @@
+# Terraform working files and accidental local state copies
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+crash.log
+crash.*.log
+
+# Real variable values - never commit, only the .example file is tracked
+terraform.tfvars
+*.auto.tfvars

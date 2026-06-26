@@ -1,0 +1,6 @@
+# .NET build artifacts - never commit these
+bin/
+obj/
+publish/
+*.user
+.vs/

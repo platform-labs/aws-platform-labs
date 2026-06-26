@@ -1,0 +1,6 @@
+# Copy this file to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars to git
+
+aws_region          = "us-east-1"
+bucket_name         = "csnp-labs-tfstate-289069331511" # Change this to include your AWS account ID
+dynamodb_table_name = "csnp-labs-tfstate-lock"

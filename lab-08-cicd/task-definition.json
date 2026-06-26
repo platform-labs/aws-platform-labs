@@ -1,0 +1,115 @@
+{
+    "taskDefinitionArn":  "arn:aws:ecs:us-east-1:289069331511:task-definition/csnp-platform-wallet-api:3",
+    "containerDefinitions":  [
+                                 {
+                                     "name":  "wallet-api",
+                                     "image":  "289069331511.dkr.ecr.us-east-1.amazonaws.com/csnp-platform-wallet-api:loi-roi",
+                                     "cpu":  0,
+                                     "portMappings":  [
+                                                          {
+                                                              "containerPort":  5000,
+                                                              "hostPort":  5000,
+                                                              "protocol":  "tcp"
+                                                          }
+                                                      ],
+                                     "essential":  true,
+                                     "environment":  [
+                                                         {
+                                                             "name":  "S3_BUCKET",
+                                                             "value":  "csnp-platform-wallet-uploads-289069331511-us-east-1"
+                                                         },
+                                                         {
+                                                             "name":  "DB_PORT",
+                                                             "value":  "5432"
+                                                         },
+                                                         {
+                                                             "name":  "ASPNETCORE_URLS",
+                                                             "value":  "http://+:5000"
+                                                         },
+                                                         {
+                                                             "name":  "DB_USER",
+                                                             "value":  "postgres"
+                                                         },
+                                                         {
+                                                             "name":  "DB_NAME",
+                                                             "value":  "wallet"
+                                                         },
+                                                         {
+                                                             "name":  "DB_HOST",
+                                                             "value":  "csnp-platform-wallet-db.cojossewwh83.us-east-1.rds.amazonaws.com"
+                                                         },
+                                                         {
+                                                             "name":  "DB_PASSWORD",
+                                                             "value":  "Password2026!"
+                                                         }
+                                                     ],
+                                     "mountPoints":  [
+
+                                                     ],
+                                     "volumesFrom":  [
+
+                                                     ],
+                                     "logConfiguration":  {
+                                                              "logDriver":  "awslogs",
+                                                              "options":  {
+                                                                              "awslogs-group":  "/ecs/csnp-platform-wallet-api",
+                                                                              "awslogs-region":  "us-east-1",
+                                                                              "awslogs-stream-prefix":  "ecs"
+                                                                          }
+                                                          },
+                                     "systemControls":  [
+
+                                                        ]
+                                 }
+                             ],
+    "family":  "csnp-platform-wallet-api",
+    "taskRoleArn":  "arn:aws:iam::289069331511:role/csnp-platform-ecs-task-role",
+    "executionRoleArn":  "arn:aws:iam::289069331511:role/csnp-platform-ecs-task-execution-role",
+    "networkMode":  "awsvpc",
+    "revision":  3,
+    "volumes":  [
+
+                ],
+    "status":  "ACTIVE",
+    "requiresAttributes":  [
+                               {
+                                   "name":  "com.amazonaws.ecs.capability.logging-driver.awslogs"
+                               },
+                               {
+                                   "name":  "ecs.capability.execution-role-awslogs"
+                               },
+                               {
+                                   "name":  "com.amazonaws.ecs.capability.ecr-auth"
+                               },
+                               {
+                                   "name":  "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+                               },
+                               {
+                                   "name":  "com.amazonaws.ecs.capability.task-iam-role"
+                               },
+                               {
+                                   "name":  "ecs.capability.execution-role-ecr-pull"
+                               },
+                               {
+                                   "name":  "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+                               },
+                               {
+                                   "name":  "ecs.capability.task-eni"
+                               }
+                           ],
+    "placementConstraints":  [
+
+                             ],
+    "compatibilities":  [
+                            "EC2",
+                            "FARGATE",
+                            "MANAGED_INSTANCES"
+                        ],
+    "requiresCompatibilities":  [
+                                    "FARGATE"
+                                ],
+    "cpu":  "256",
+    "memory":  "512",
+    "registeredAt":  "2026-06-26T10:20:03.720000+07:00",
+    "registeredBy":  "arn:aws:iam::289069331511:user/terraform-cli"
+}

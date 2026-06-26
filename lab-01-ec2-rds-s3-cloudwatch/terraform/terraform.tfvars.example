@@ -1,0 +1,24 @@
+# Copy this file to terraform.tfvars and fill in real values.
+# terraform.tfvars is gitignored - NEVER commit it, it will contain real
+# account-specific values (VPC id, your IP, db password).
+
+aws_region   = "us-east-1"
+project_name = "csnp-wallet-dev"
+
+vpc_id     = "vpc-xxxxxxxx"
+subnet_ids = ["subnet-xxxxxxxx", "subnet-yyyyyyyy"]
+
+ec2_instance_type = "t3.micro"
+key_pair_name     = "wallet-dev-key" # must already exist in AWS, created manually
+
+# Get your current public IP: curl -s ifconfig.me
+my_ip_cidr = "116.109.136.83/32"
+
+db_instance_class    = "db.t3.micro"
+db_engine_version    = "16"
+db_allocated_storage = 20
+db_name              = "wallet"
+db_username          = "postgres"
+# Better: don't put db_password here at all, pass it via
+# TF_VAR_db_password environment variable instead.
+db_password          = "replace-me"

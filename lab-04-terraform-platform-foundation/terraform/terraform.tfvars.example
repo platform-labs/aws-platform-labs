@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars and fill in real values. Never commit terraform.tfvars.
+
+my_ip_cidr    = "116.109.136.83/32" # your current public IP, find via: curl -s https://checkip.amazonaws.com
+key_pair_name = "wallet-dev-key"
+environment   = "lab"
+
+# Everything else (vpc_cidr, subnet CIDRs, azs, nat_gateway_az_index) has
+# sensible defaults in variables.tf - override here only if you want
+# different values than the lab's standard plan.

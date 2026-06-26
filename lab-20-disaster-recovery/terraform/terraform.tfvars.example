@@ -1,0 +1,4 @@
+primary_region   = "us-east-1"
+dr_region        = "us-west-2"
+backup_tag_key   = "Backup"
+backup_tag_value = "lab20"

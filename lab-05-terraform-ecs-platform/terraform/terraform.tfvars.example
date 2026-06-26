@@ -1,0 +1,22 @@
+# Copy to terraform.tfvars and fill in real values. Never commit terraform.tfvars.
+#
+# Network + Security values below come from Lab 4's `terraform output` - run:
+#   cd ../../lab-04-terraform-platform-foundation/terraform && terraform output
+# and copy the matching values here.
+
+vpc_id                  = "vpc-01c4d270c42b27f90"
+public_subnet_ids       = ["subnet-01318a047008abe4d", "subnet-0fd8f0539fc64dab9"]
+private_app_subnet_ids  = ["subnet-09da1137855ac5e4f", "subnet-0bf51daa558ba95d9"]
+private_data_subnet_ids = ["subnet-0b177aa8be4645f49", "subnet-07dc5598485003583"]
+alb_security_group_id   = "sg-052a54a7d7dd92fbc"
+ecs_security_group_id   = "sg-05322754623619e25"
+rds_security_group_id   = "sg-0ef46335a39da2e03"
+environment             = "lab"
+
+# RDS configuration - Lab 5 creates its own RDS instance
+db_name     = "wallet"
+db_user     = "postgres"
+db_password = "REPLACE_BEFORE_APPLY" # use TF_VAR_db_password env var instead if possible
+
+# ECR container image - build + push this first (same flow as Lab 2)
+container_image = "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/csnp-platform-wallet-api:latest"

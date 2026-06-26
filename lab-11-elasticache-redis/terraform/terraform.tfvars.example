@@ -1,0 +1,4 @@
+vpc_id                  = "vpc-REPLACE_ME"
+private_data_subnet_ids = ["subnet-REPLACE_A", "subnet-REPLACE_B"]
+ecs_security_group_id   = "sg-REPLACE_ECS"
+node_type               = "cache.t4g.micro"

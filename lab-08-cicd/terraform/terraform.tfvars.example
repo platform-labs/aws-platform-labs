@@ -1,0 +1,11 @@
+github_owner            = "platform-labs"
+github_repository       = "aws-platform-labs"
+github_branch           = "main"
+github_environment      = "dev"
+create_oidc_provider    = true
+ecr_repository_arn      = "arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/csnp-platform-wallet-api"
+ecs_cluster_arn         = "arn:aws:ecs:us-east-1:ACCOUNT_ID:cluster/csnp-platform-cluster"
+ecs_service_arn         = "arn:aws:ecs:us-east-1:ACCOUNT_ID:service/csnp-platform-cluster/csnp-platform-wallet-api-service"
+task_execution_role_arn = "arn:aws:iam::ACCOUNT_ID:role/REPLACE_ME"
+task_role_arn           = "arn:aws:iam::ACCOUNT_ID:role/REPLACE_ME"
+environment             = "lab"

@@ -1,0 +1,2 @@
+alb_arn    = "arn:aws:elasticloadbalancing:us-east-1:ACCOUNT_ID:loadbalancer/app/REPLACE"
+rate_limit = 300

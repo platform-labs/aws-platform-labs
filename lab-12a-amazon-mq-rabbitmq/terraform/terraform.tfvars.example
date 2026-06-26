@@ -1,0 +1,6 @@
+vpc_id                  = "vpc-REPLACE_ME"
+private_app_subnet_ids  = ["subnet-REPLACE_A", "subnet-REPLACE_B"]
+ecs_security_group_id   = "sg-REPLACE_ECS"
+broker_username         = "csnplab"
+broker_password         = "REPLACE_WITH_LAB_ONLY_PASSWORD"
+host_instance_type      = "mq.t3.micro"

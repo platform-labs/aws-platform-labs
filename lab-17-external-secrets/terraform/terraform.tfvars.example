@@ -1,0 +1,4 @@
+oidc_provider_arn          = "arn:aws:iam::ACCOUNT_ID:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/REPLACE"
+oidc_issuer_without_scheme = "oidc.eks.us-east-1.amazonaws.com/id/REPLACE"
+secret_arn                 = "arn:aws:secretsmanager:us-east-1:ACCOUNT_ID:secret:REPLACE"
+kms_key_arn                = "arn:aws:kms:us-east-1:ACCOUNT_ID:key/REPLACE"

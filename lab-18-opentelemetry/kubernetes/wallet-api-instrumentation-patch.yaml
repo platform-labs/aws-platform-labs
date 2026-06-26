@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wallet-api
+  namespace: wallet
+spec:
+  template:
+    spec:
+      containers:
+        - name: wallet-api
+          env:
+            - name: OTEL_SERVICE_NAME
+              value: wallet-api
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: http://adot-collector.wallet.svc.cluster.local:4317
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: grpc
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: deployment.environment=lab,service.namespace=csnp
